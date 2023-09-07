@@ -1,0 +1,20 @@
+{
+  "name": "exp_exa_little",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "garage": "github:gaia-web/exp_garage",
+    "lit-html": "^2.8.0",
+    "little": "github:gaia-web/exp_little"
+  }
+}
