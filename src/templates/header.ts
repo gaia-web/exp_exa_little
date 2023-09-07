@@ -42,7 +42,7 @@ const Nav = (langHelper: (chinese: string, english: string) => string) => html`
 `;
 
 const Header = ({ isEnglish, setIsEnglish, langHelper }: Props) => html`
-  <gaia-header>
+  <gaia-header sticky>
     <img src=${logoUrl} height="50px" />
     ${Nav(langHelper)}
     <button
