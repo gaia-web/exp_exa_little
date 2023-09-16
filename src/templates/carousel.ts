@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import "garage";
+import "@gaia/garage";
 
 type Props = {
   langHelper: (chinese: string, english: string) => string;

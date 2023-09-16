@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import "garage";
+import "@gaia/garage";
 import logoUrl from "/vite.svg";
 
 type Props = {

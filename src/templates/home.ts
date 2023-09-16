@@ -1,6 +1,6 @@
 import { html } from "lit-html";
 import { rerender } from "little";
-import "garage";
+import "@gaia/garage";
 import Header from "./header";
 import Carousel from "./carousel";
 

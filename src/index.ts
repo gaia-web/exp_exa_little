@@ -1,8 +1,8 @@
 import { setupRouter } from "little";
 import Home from "./templates/home";
+import SomethingElse from "./templates/something-else";
 
 import "./index.css";
-import SomethingElse from "./templates/something-else";
 
 setupRouter("/", [
   {
