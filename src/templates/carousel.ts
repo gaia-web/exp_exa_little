@@ -30,19 +30,25 @@ const Carousel = ({ langHelper }: Props) => html`
       class="carousel-item"
       style="background: url(https://picsum.photos/id/1/1440/900)"
     >
-      <span class="carousel-text"> ${langHelper("一", "One")} </span>
+      <span class="carousel-text">
+        ${langHelper("这是第一页", "This is the first slide")}
+      </span>
     </div>
     <div
       class="carousel-item"
       style="background: url(https://picsum.photos/id/356/1440/900)"
     >
-      <span class="carousel-text"> ${langHelper("二", "Two")} </span>
+      <span class="carousel-text">
+        ${langHelper("这是第二页", "This is the second slide")}
+      </span>
     </div>
     <div
       class="carousel-item"
       style="background: url(https://picsum.photos/id/2/1440/900)"
     >
-      <span class="carousel-text"> ${langHelper("三", "Three")} </span>
+      <span class="carousel-text">
+        ${langHelper("这是第三页", "This is the third slide")}
+      </span>
     </div>
   </gaia-carousel>
 `;
