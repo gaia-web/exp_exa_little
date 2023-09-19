@@ -10,7 +10,7 @@ type Props = {
 
 const Nav = (langHelper: (chinese: string, english: string) => string) => html`
   <gaia-nav slot="collapsible">
-    <gaia-nav-item href="#">${langHelper("首页", "Home")}</gaia-nav-item>
+    <gaia-nav-item href="/home">${langHelper("首页", "Home")}</gaia-nav-item>
     <gaia-nav-item>
       ${langHelper("移民通道", "Immigration Entrances")}
       <gaia-nav-item href="#" slot="nested">
@@ -28,14 +28,14 @@ const Nav = (langHelper: (chinese: string, english: string) => string) => html`
         <p style="color: grey">Blah blah blah</p>
       </gaia-nav-item>
     </gaia-nav-item>
-    <gaia-nav-item href="#">
+    <gaia-nav-item href="successful-cases">
       ${langHelper("成功案例", "Successful Cases")}
     </gaia-nav-item>
-    <gaia-nav-item href="#">
+    <gaia-nav-item href="/about-us">
       ${langHelper("关于我们", "About Us")}
     </gaia-nav-item>
-    <gaia-nav-item href="#"> ${langHelper("新闻", "News")} </gaia-nav-item>
-    <gaia-nav-item href="#">
+    <gaia-nav-item href="/news"> ${langHelper("新闻", "News")} </gaia-nav-item>
+    <gaia-nav-item href="/contact us">
       ${langHelper("联系我们", "Contact Us")}
     </gaia-nav-item>
   </gaia-nav>

@@ -6,7 +6,7 @@ const SomethingElse = ({ routerMatch }: TemplateProps) =>
     <div>
       You are on <b>${routerMatch?.data?.path}</b>
       <br />
-      <a href="">Go back</a>
+      <a href="javascript: history.go(-1);">Go back</a>
     </div>
   `;
 
