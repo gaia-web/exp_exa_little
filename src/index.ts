@@ -4,7 +4,7 @@ import SomethingElse from "./templates/something-else";
 
 import "./index.css";
 
-setupRouter("/", [
+const router = setupRouter("/", [
   {
     path: "/",
     template: Home,
@@ -14,3 +14,5 @@ setupRouter("/", [
     template: SomethingElse,
   },
 ]);
+
+export { router };
