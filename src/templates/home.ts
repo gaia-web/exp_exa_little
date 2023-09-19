@@ -3,6 +3,8 @@ import { rerender } from "little";
 import "@gaia/garage";
 import Header from "./header";
 import Carousel from "./carousel";
+import Section1 from "./section-1";
+import Section2 from "./section-2";
 
 let isEnglish = false;
 
@@ -17,19 +19,7 @@ function setIsEnglish(_isEnglish: boolean) {
 
 const Home = () => html`
   ${Header({ isEnglish, setIsEnglish, langHelper })} ${Carousel({ langHelper })}
-  <div style="position: relative; margin-top: 200px; margin-bottom: 100vh">
-    The language toggle and view breakpoint works.
-    <br />
-    Some links to the other page:
-    <hr />
-    <a href="/link1">Link1</a>
-    <br />
-    <a href="/link2">Link2</a>
-    <br />
-    <a href="/link3">Link2</a>
-    <br />
-    And some empty spaces.
-  </div>
+  ${Section1({ langHelper })} ${Section2({ langHelper })}
 `;
 
 export default Home;
