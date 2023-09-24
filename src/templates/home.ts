@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import { rerender } from "little";
+import { TemplateProps, rerender } from "little";
 import "@gaia/garage";
 import Header from "./header";
 import Carousel from "./carousel";
@@ -17,9 +17,10 @@ function setIsEnglish(_isEnglish: boolean) {
   rerender();
 }
 
-const Home = () => html`
-  ${Header({ isEnglish, setIsEnglish, langHelper })} ${Carousel({ langHelper })}
-  ${Section1({ langHelper })} ${Section2({ langHelper })}
+const Home = (props: TemplateProps) => html`
+  ${Header({ ...props, isEnglish, setIsEnglish, langHelper })}
+  ${Carousel({ langHelper })} ${Section1({ langHelper })}
+  ${Section2({ langHelper })}
 `;
 
 export default Home;

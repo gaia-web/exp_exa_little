@@ -1,16 +1,27 @@
 import { html } from "lit-html";
 import "@gaia/garage";
 import logoUrl from "/vite.svg";
+import { TemplateProps } from "little";
+import Navigo from "navigo";
 
 type Props = {
   isEnglish: boolean;
   setIsEnglish: (isEnglish: boolean) => void;
   langHelper: (chinese: string, english: string) => string;
+} & TemplateProps;
+
+type NavProps = {
+  router?: Navigo;
+  langHelper: (chinese: string, english: string) => string;
 };
 
-const Nav = (langHelper: (chinese: string, english: string) => string) => html`
+const Nav = ({ router, langHelper }: NavProps) => html`
   <gaia-nav slot="collapsible">
-    <gaia-nav-item href="/home">${langHelper("首页", "Home")}</gaia-nav-item>
+    <gaia-nav-item
+      @click=${() =>
+        (document as any).startViewTransition(() => router?.navigate(""))}
+      >${langHelper("首页", "Home")}</gaia-nav-item
+    >
     <gaia-nav-item>
       ${langHelper("移民通道", "Immigration Entrances")}
       <gaia-nav-item href="#" slot="nested">
@@ -28,23 +39,43 @@ const Nav = (langHelper: (chinese: string, english: string) => string) => html`
         <p style="color: grey">Blah blah blah</p>
       </gaia-nav-item>
     </gaia-nav-item>
-    <gaia-nav-item href="successful-cases">
+    <gaia-nav-item
+      @click=${() =>
+        (document as any).startViewTransition(() =>
+          router?.navigate("/successful-cases")
+        )}
+    >
       ${langHelper("成功案例", "Successful Cases")}
     </gaia-nav-item>
-    <gaia-nav-item href="/about-us">
+    <gaia-nav-item
+      @click=${() =>
+        (document as any).startViewTransition(() =>
+          router?.navigate("/about-us")
+        )}
+    >
       ${langHelper("关于我们", "About Us")}
     </gaia-nav-item>
-    <gaia-nav-item href="/news"> ${langHelper("新闻", "News")} </gaia-nav-item>
-    <gaia-nav-item href="/contact us">
+    <gaia-nav-item
+      @click=${() =>
+        (document as any).startViewTransition(() => router?.navigate("/news"))}
+    >
+      ${langHelper("新闻", "News")}
+    </gaia-nav-item>
+    <gaia-nav-item
+      @click=${() =>
+        (document as any).startViewTransition(() =>
+          router?.navigate("/contact-us")
+        )}
+    >
       ${langHelper("联系我们", "Contact Us")}
     </gaia-nav-item>
   </gaia-nav>
 `;
 
-const Header = ({ isEnglish, setIsEnglish, langHelper }: Props) => html`
+const Header = ({ router, isEnglish, setIsEnglish, langHelper }: Props) => html`
   <gaia-header sticky>
     <img src=${logoUrl} height="50px" />
-    ${Nav(langHelper)}
+    ${Nav({ router, langHelper })}
     <button
       slot="extra"
       @click=${() => setIsEnglish(!isEnglish)}

@@ -1,12 +1,18 @@
 import { html } from "lit-html";
 import { TemplateProps } from "little";
 
-const SomethingElse = ({ routerMatch }: TemplateProps) =>
+const SomethingElse = ({ router, routerMatch }: TemplateProps) =>
   html`
     <div>
       You are on <b>${routerMatch?.data?.path}</b>
       <br />
-      <a href="javascript: history.go(-1);">Go back</a>
+      <button
+        style="background: brown;"
+        @click=${() =>
+          (document as any).startViewTransition(() => router?.navigate(""))}
+      >
+        Go back
+      </button>
     </div>
   `;
 
