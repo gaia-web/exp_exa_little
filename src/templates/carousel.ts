@@ -9,6 +9,10 @@ const Carousel = ({ langHelper }: Props) => html`
   <style>
     .carousel-item {
       position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      
     }
 
     .carousel-text {
@@ -17,7 +21,7 @@ const Carousel = ({ langHelper }: Props) => html`
       top: 50%;
       transform: translate(-50%, -50%);
       font-size: 2rem;
-      background: inherit;
+      background-image: inherit;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -28,7 +32,7 @@ const Carousel = ({ langHelper }: Props) => html`
   <gaia-carousel timeout="5" style="height: 500px">
     <div
       class="carousel-item"
-      style="background: url(https://picsum.photos/id/1/1440/900)"
+      style="background-image: url(https://picsum.photos/id/1/1440/900)"
     >
       <span class="carousel-text">
         ${langHelper("这是第一页", "This is the first slide")}
@@ -36,7 +40,7 @@ const Carousel = ({ langHelper }: Props) => html`
     </div>
     <div
       class="carousel-item"
-      style="background: url(https://picsum.photos/id/356/1440/900)"
+      style="background-image: url(https://picsum.photos/id/356/1440/900)"
     >
       <span class="carousel-text">
         ${langHelper("这是第二页", "This is the second slide")}
@@ -44,7 +48,7 @@ const Carousel = ({ langHelper }: Props) => html`
     </div>
     <div
       class="carousel-item"
-      style="background: url(https://picsum.photos/id/2/1440/900)"
+      style="background-image: url(https://picsum.photos/id/2/1440/900)"
     >
       <span class="carousel-text">
         ${langHelper("这是第三页", "This is the third slide")}
