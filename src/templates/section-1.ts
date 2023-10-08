@@ -24,24 +24,24 @@ const Section1 = ({ langHelper }: Props) =>
       <div
         style="display: flex; padding: 10px; text-align: center; flex-wrap: wrap;"
       >
-        <h2 style="flex: 0 0 100%;">${langHelper("巴拉巴拉", "Blah Blah")}</h2>
+        <h2 style="flex: 0 0 100%; color: orange;" class="hue-rotating;">${langHelper("巴拉巴拉", "Blah Blah")}</h2>
         <p style="flex: 0 0 100%;">
           ${langHelper(
-            "巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
-            "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"
-          )}
+    "巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉",
+    "Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah"
+  )}
         </p>
         <ul style="flex: 0 0 100%; text-align: start; list-style: none;">
           ${[1, 2, 3].map(
-            () => html`
+    () => html`
               <li>
                 ${langHelper(
-                  "巴拉巴拉巴拉巴拉巴拉",
-                  "Blah Blah Blah Blah Blah"
-                )}
+      "巴拉巴拉巴拉巴拉巴拉",
+      "Blah Blah Blah Blah Blah"
+    )}
               </li>
             `
-          )}
+  )}
         </ul>
       </div>
       <div style="padding: 10px;">

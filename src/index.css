@@ -10,6 +10,20 @@ body {
   margin: 0;
 }
 
+@keyframes hue-rotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.hue-rotating {
+  animation: hue-rotate 120s linear infinite;
+}
+
 @keyframes page-out {
   to {
     transform: scale(5);

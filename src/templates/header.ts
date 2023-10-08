@@ -80,6 +80,7 @@ const Header = ({ router, isEnglish, setIsEnglish, langHelper }: Props) => html`
       slot="extra"
       @click=${() => setIsEnglish(!isEnglish)}
       style="background: #F687B3"
+      class="hue-rotating"
     >
       ${langHelper("English", "中文")}
     </button>
